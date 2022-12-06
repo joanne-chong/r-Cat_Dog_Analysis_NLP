@@ -43,7 +43,7 @@ The subreddit posts were processed and analysed through the following steps:
 1. **Web Scraping**: Using Pushshift API, we were able to extract 100 posts per day within 30 days from the subreddits.
 2. **Data Cleaning**: We assessed the data by checking the relevance of the variables, removing outliers, dealing with missing values that were key to the investigation.
 3. **Exploratory Data Analysis**: We visualized the cleaned data through a series of graphs and plots to better understand the dataset and identify potential keywords for the modeling process.
-4. **Data Modeling & Evaluation**: Following the selection of variables, we processed the text data even further and modeled them through these models - Logistic Regression, Naive Bayes and XXX. The best model will then be used to predict whether keywords that would best identify cat vs dog issues. 
+4. **Data Modeling & Evaluation**: Following the selection of variables, we processed the text data even further and modeled them through these models - Logistic Regression, Naive Bayes, Adaptive Boosting and Random Forest. The best model will then be used to predict whether keywords that would best identify cat vs dog issues. 
 
 ## Additional References
 1. [Study explores pandemic-specific challenges of pet ownership](https://www.avma.org/news/study-explores-pandemic-specific-challenges-pet-ownership)
