@@ -92,12 +92,12 @@ The baseline model accuracy is 67% accurate at predicting that a post is a cat-r
     - Count Vectorizer with 10,000 max feature limit
     - Minimum number of documents to include token is 2
     - Maximum number of documents to include token is 90%
-    - Includes unigrams and bigrams
+    - Includes unigrams only
 4. The other models that did well in terms of precision: Count Vectorizer & Logistic Regression, Count Vectorizer & Random Forest, TF-IDF & Random Forest. 
 
 ### Key Takeaways
-1. Based on the top keywords, the best one-word keyword that describes r/CatAdvice would be: "litter". We notice a number of environment-related words, such as "home", "house", "room" - indicating the users are concerned about their cats' behavior or reaction in the environment. 
-2. Meanwhile keywords for r/DogAdvice are usually two words, and we can see that a number of them focus on the dog's breed and training. This also reaffirms our earlier observation that users are more concerned about their pets' training and behavior.
+1. Based on the top keywords, the keywords that best describes r/CatAdvice would be: "litter", "litter box", "kitten", "stray". We notice a number of environment-related words, such as "home", "house", "room", "outside" - indicating the users are concerned about their cats' behavior or reaction in the environment. 
+2. Meanwhile the most indicative keywords for r/DogAdvice are "vet" and "advice" - this is not very helpful at first. Upon further investigation, we found that the dog owners tend to post about their issue even after seeing a vet - and look for support in the subreddit forum on whether anyone else has experienced similar issue. 
 
 ## Limitations
 When it comes to language and texts, it's always challenging trying to achieve near-perfect predictions on what users may say next, and what it would mean. The best way to improve our modeling outcome would be:
@@ -108,8 +108,8 @@ When it comes to language and texts, it's always challenging trying to achieve n
 ## Conclusion
 In summary, our model has helped address the challenges faced by the animal shelter:
 1. Pet owners are primarily concerned with their pets' surrounding environment and training.
-    - r/CatAdvice - owners are concerned with their cats' urinating outside the litter box and overall frequency. They also seek advice on food (wet food in particular).
-    - r/DogAdvice - in the EDA process we saw that owners mentioning that their dogs were acting strange but it wasn't clear on the exact behavior. However, following the modeling process we can see that owners are concerned about training their dogs. Interestingly, dog owners tend to elaborate on the details more and often mention their dogs' breed.
+    - r/CatAdvice - owners are concerned with their cats' urinating outside the litter box and overall frequency. They are also worried about whether the cats are adapting well to the surrounding environment.
+    - r/DogAdvice - in the EDA process we saw that owners mentioning that their dogs were acting strange but it wasn't clear on the exact behavior. However, following the modeling process we can see that most of the issues faced continue even after the owners have seen a vet - likely they are seeking second or third opinion from the subreddit. Interestingly, dog owners tend to elaborate on the details more and often mention their dogs' breed.
 2. The most accurate prediction model is Naive Bayes, along with the Counter Vectorization. 
     - Based on our score, we can run this model on similar dataset that are specific to cat- and dog-related behaviors and general care.
     - For the animal shelter, this model will be able to help them better predict issues that potential owners will face and the concerns that they might have.
